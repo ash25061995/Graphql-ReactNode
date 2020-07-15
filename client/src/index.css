@@ -3,4 +3,10 @@ body {
   font-family: 'Nunito', sans-serif;
 }
 
+.AddBookForm{
+  margin-top: 70%;
+  width: 100%;
+  background: whitesmoke;
+  height: 100%;
+}
 
