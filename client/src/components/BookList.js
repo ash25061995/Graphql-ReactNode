@@ -1,10 +1,12 @@
-import React from 'react';
+import React,{useState} from 'react';
 import { useQuery } from '@apollo/react-hooks';
 import {getBooks} from '../queries/queries';
+import BookDetails from './BookDetails';
 
 
 
 const BookList = () => {
+    const [id,setId]=useState(null)
     const res = useQuery(getBooks);
     function displayBooks(){
         console.log(res.data)
@@ -15,7 +17,7 @@ const BookList = () => {
         }
         return res.data.books.map(book => {
             return (
-                <li key={book.id}>{book.name} by author {book.author.name}</li>
+                <li key={book.id} onClick={()=>{setId(book.id)}}>{book.name} by author {book.author.name}</li>
                 )
         })
     }
@@ -25,7 +27,7 @@ const BookList = () => {
             <ul id="book-list">
                  {displayBooks()}
             </ul>
-            
+            <BookDetails id={id}/>
         </div>)
 
 };

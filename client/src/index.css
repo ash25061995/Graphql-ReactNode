@@ -1,10 +1,11 @@
 body {
   background: #eee;
   font-family: 'Nunito', sans-serif;
+  
 }
 
 .AddBookForm{
-  margin-top: 70%;
+  margin-top: 15%;
   width: 100%;
   background: whitesmoke;
   height: 100%;
