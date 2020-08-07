@@ -1,13 +1,54 @@
+:root{
+ --bg:white;
+ --color:black;
+ --bdr-color:black;
+}
+
 body {
-  background: #eee;
+  background: var(--bg);
+  color: var(--color);
   font-family: 'Nunito', sans-serif;
   
 }
 
+
+.theme-btn:hover{
+  background-color: var(--btn-bg);
+  color: var(--btn-color);
+}
+
 .AddBookForm{
-  margin-top: 15%;
   width: 100%;
-  background: whitesmoke;
   height: 100%;
 }
 
+* {
+  box-sizing: border-box;
+}
+
+#book-list {
+  flex: 3;
+  padding: 20px;
+
+}
+#book-list-item {
+  border: 1px solid var(--bdr-color);
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+  list-style: none;
+  flex-direction: column;
+}
+
+#book-details{
+  flex: 1;
+  background-color: palevioletred;
+  padding: 20px;
+}
+
+#display-books{
+  display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 38px;
+}

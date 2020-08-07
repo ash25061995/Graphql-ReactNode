@@ -1,0 +1,60 @@
+.slider{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    flex: 3;
+}
+
+.container{
+    display: flex;
+}
+
+#book-details-container{
+    flex: 1;
+    background-color: palevioletred;
+    padding: 20px;   
+}
+
+%btn-styles{
+    position: absolute;
+    width: 10%;
+    height: 100%;
+    cursor: pointer;
+    background: none;
+    border: none;
+    outline: none;
+    transition: 0.5s;
+    &:hover{
+        background: rgba(0, 0, 0, 0.349);
+        i{
+            color: whitesmoke;
+        }
+    }
+}
+
+.slide{
+    position: relative;
+    min-width: 100%;
+    height: 100%;
+    transition: 0.5s;
+    overflow: hidden;
+    font-size: 5vw;
+    text-align: center;
+    vertical-align: middle;
+}
+
+#goLeft{
+  left: 0;
+  @extend %btn-styles;
+}
+
+#goRight{
+    right: 0;
+    @extend %btn-styles;
+  }
